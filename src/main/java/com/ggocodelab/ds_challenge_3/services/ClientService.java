@@ -1,7 +1,5 @@
 package com.ggocodelab.ds_challenge_3.services;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ggocodelab.ds_challenge_3.dto.ClientDTO;
 import com.ggocodelab.ds_challenge_3.entities.Client;
 import com.ggocodelab.ds_challenge_3.repositories.ClientRepository;
+import com.ggocodelab.ds_challenge_3.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class ClientService {
@@ -22,15 +21,14 @@ public class ClientService {
 	public Page<ClientDTO> findAll(Pageable pageable){
 		Page<Client> clients = repository.findAll(pageable);
 		return clients.map(x -> new ClientDTO(x));
-	}
+	}	
 	
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
-		Optional<Client> result = repository.findById(id);
-		Client client = result.get();
-		ClientDTO dto = new ClientDTO(client);
-		return dto;		
-	}
+		Client client = repository.findById(id).orElseThrow(
+				()-> new ResourceNotFoundException("Cliente não encontrado. ID: " + id));
+		return new ClientDTO(client);		
+	}	
 	
 	@Transactional
 	public ClientDTO insert(ClientDTO dto) {
@@ -51,9 +49,7 @@ public class ClientService {
 	@Transactional
 	public void delete(Long id) {
 		repository.deleteById(id);
-	}
-	
-	
+	}	
 	
 	private void copyToEntity(ClientDTO dto, Client entity) {
 		entity.setName(dto.getName());
