@@ -1,8 +1,11 @@
 package com.ggocodelab.ds_challenge_3.dto;
 
 import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.ggocodelab.ds_challenge_3.entities.Client;
 
+@JsonPropertyOrder({ "id", "name", "cpf", "income", "birthDate", "children"})
 public class ClientDTO {
 	
 	private Long id;
