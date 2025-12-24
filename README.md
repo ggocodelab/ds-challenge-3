@@ -37,11 +37,3 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 [ ] Atualização de cliente retorna 422 e mensagens customizadas com dados inválidos.  
 [✔] Deleção de cliente existente.  
 [ ] Deleção de cliente retorna 404 para cliente inexistente.
-
-
-
-
-
-
-
-
