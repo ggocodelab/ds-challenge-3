@@ -30,7 +30,7 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 [✔] Busca por id retorna cliente existente.    
 [ ] Busca por id retorna 404 para cliente inexistente.  
 [✔] Busca paginada retorna listagem paginada corretamente.  
-[ ] Inserção de cliente insere cliente com dados válidos.  
+[✔] Inserção de cliente insere cliente com dados válidos.  
 [ ] Inserção de cliente retorna 422 e mensagens customizadas com dados inválidos.  
 [ ] Atualização de cliente atualiza cliente com dados válidos.    
 [ ] Atualização de cliente retorna 404 para cliente inexistente.  
