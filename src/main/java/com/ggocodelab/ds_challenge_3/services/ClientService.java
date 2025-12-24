@@ -1,5 +1,7 @@
 package com.ggocodelab.ds_challenge_3.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,5 +23,15 @@ public class ClientService {
 		Page<Client> clients = repository.findAll(pageable);
 		return clients.map(x -> new ClientDTO(x));
 	}
+	
+	@Transactional(readOnly = true)
+	public ClientDTO findById(Long id) {
+		Optional<Client> result = repository.findById(id);
+		Client client = result.get();
+		ClientDTO dto = new ClientDTO(client);
+		return dto;		
+	}
+	
+	
 
 }
