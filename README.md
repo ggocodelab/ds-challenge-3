@@ -27,7 +27,7 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 5. Seguir o diagrama que faz parte do descritivo da atividade.
 
 # Checklist
-[ ] Busca por id retorna cliente existente.    
+[✔] Busca por id retorna cliente existente.    
 [ ] Busca por id retorna 404 para cliente inexistente.  
 [✔] Busca paginada retorna listagem paginada corretamente.  
 [ ] Inserção de cliente insere cliente com dados válidos.  
