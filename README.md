@@ -28,7 +28,7 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 
 # Checklist
 [✔] Busca por id retorna cliente existente.    
-[ ] Busca por id retorna 404 para cliente inexistente.  
+[✔] Busca por id retorna 404 para cliente inexistente.  
 [✔] Busca paginada retorna listagem paginada corretamente.  
 [✔] Inserção de cliente insere cliente com dados válidos.  
 [ ] Inserção de cliente retorna 422 e mensagens customizadas com dados inválidos.  
@@ -36,4 +36,12 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 [ ] Atualização de cliente retorna 404 para cliente inexistente.  
 [ ] Atualização de cliente retorna 422 e mensagens customizadas com dados inválidos.  
 [✔] Deleção de cliente existente.  
-[ ] Deleção de cliente retorna 404 para cliente inexistente.  
+[ ] Deleção de cliente retorna 404 para cliente inexistente.
+
+
+
+
+
+
+
+
