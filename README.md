@@ -34,6 +34,6 @@ Entrega do desafio de conclusão do terceiro módulo do curso Java Spring Profes
 [✔] Inserção de cliente retorna 422 e mensagens customizadas com dados inválidos.  
 [✔] Atualização de cliente atualiza cliente com dados válidos.    
 [✔] Atualização de cliente retorna 404 para cliente inexistente.  
-[ ] Atualização de cliente retorna 422 e mensagens customizadas com dados inválidos.  
+[✔] Atualização de cliente retorna 422 e mensagens customizadas com dados inválidos.  
 [✔] Deleção de cliente existente.  
 [✔] Deleção de cliente retorna 404 para cliente inexistente.
