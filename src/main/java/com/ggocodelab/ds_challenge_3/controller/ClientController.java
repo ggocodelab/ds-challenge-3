@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ggocodelab.ds_challenge_3.dto.ClientDTO;
 import com.ggocodelab.ds_challenge_3.services.ClientService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/clients")
 public class ClientController {
@@ -35,7 +37,7 @@ public class ClientController {
 	}
 	
 	@PostMapping
-	public ClientDTO insert(@RequestBody ClientDTO dto) {
+	public ClientDTO insert(@Valid @RequestBody ClientDTO dto) {
 		return service.insert(dto);
 	}
 	
